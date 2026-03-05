@@ -1,0 +1,22 @@
+{
+  "required_tags": ["owner", "env", "cost_center"],
+  "environments": ["dev", "staging", "prod"],
+  "iac": {
+    "max_drift_resources": 0,
+    "require_pinned_versions": true
+  },
+  "pipeline": {
+    "require_prod_approvals": true,
+    "required_test_stages": ["unit", "integration_smoke"],
+    "require_immutable_artifacts": true,
+    "prod_requires_strategy": true,
+    "allowed_strategies": ["canary", "blue_green", "rolling"]
+  },
+  "reliability": {
+    "require_slo": true,
+    "max_mttr_minutes": 60,
+    "require_postmortem_for_sev1_2": true,
+    "require_runbook_for_service": true
+  }
+}
+

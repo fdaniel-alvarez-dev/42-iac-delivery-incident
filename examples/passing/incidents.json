@@ -1,0 +1,22 @@
+{
+  "window_days": 30,
+  "incidents": [
+    {
+      "id": "inc-1001",
+      "severity": 2,
+      "duration_minutes": 34,
+      "summary": "Elevated error rate after deploy; canary aborted.",
+      "postmortem_complete": true,
+      "root_cause_captured": true
+    },
+    {
+      "id": "inc-1002",
+      "severity": 3,
+      "duration_minutes": 21,
+      "summary": "Database connection pool saturation during peak.",
+      "postmortem_complete": true,
+      "root_cause_captured": true
+    }
+  ]
+}
+

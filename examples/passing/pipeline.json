@@ -1,0 +1,19 @@
+{
+  "service": "orders-api",
+  "artifact": { "immutable": true, "build_once_deploy_many": true },
+  "stages": [
+    { "name": "unit", "required": true, "timeout_minutes": 10 },
+    { "name": "integration_smoke", "required": true, "timeout_minutes": 15 },
+    {
+      "name": "deploy_prod",
+      "required": true,
+      "environment": "prod",
+      "approvals_required": 2,
+      "strategy": "canary",
+      "rollback_plan": "automatic"
+    }
+  ],
+  "optimizations": { "cache": true, "parallel": true },
+  "observations": { "p95_minutes": 18, "flake_rate": 0.02 }
+}
+

@@ -1,0 +1,18 @@
+{
+  "service": "orders-api",
+  "artifact": { "immutable": false, "build_once_deploy_many": false },
+  "stages": [
+    { "name": "unit", "required": true, "timeout_minutes": 10 },
+    {
+      "name": "deploy_prod",
+      "required": true,
+      "environment": "prod",
+      "approvals_required": 0,
+      "strategy": "rolling",
+      "rollback_plan": "manual"
+    }
+  ],
+  "optimizations": { "cache": false, "parallel": false },
+  "observations": { "p95_minutes": 55, "flake_rate": 0.18 }
+}
+

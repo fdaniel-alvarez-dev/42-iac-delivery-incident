@@ -1,0 +1,22 @@
+{
+  "window_days": 30,
+  "incidents": [
+    {
+      "id": "inc-2001",
+      "severity": 1,
+      "duration_minutes": 214,
+      "summary": "Production outage due to misconfigured security rule.",
+      "postmortem_complete": false,
+      "root_cause_captured": false
+    },
+    {
+      "id": "inc-2002",
+      "severity": 2,
+      "duration_minutes": 123,
+      "summary": "Recurring deploy regression; rollback took too long.",
+      "postmortem_complete": false,
+      "root_cause_captured": true
+    }
+  ]
+}
+

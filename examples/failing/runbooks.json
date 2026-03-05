@@ -1,0 +1,15 @@
+{
+  "runbooks": [
+    {
+      "id": "iac-drift",
+      "title": "IaC drift response",
+      "path": "docs/runbooks/01_iac_drift_response.md"
+    },
+    {
+      "id": "release-guardrails",
+      "title": "Release guardrails and rollback readiness",
+      "path": "docs/runbooks/02_release_guardrails.md"
+    }
+  ]
+}
+

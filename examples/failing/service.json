@@ -1,0 +1,8 @@
+{
+  "service": "orders-api",
+  "slo": { "availability_target": 0.99, "window_days": 28 },
+  "alerting": { "slo_burn_alerts": false, "paging_enabled": true },
+  "oncall": { "rotation": "single", "handoff_checklist": false },
+  "runbook_id": "missing-runbook"
+}
+

@@ -1,0 +1,30 @@
+{
+  "environment": "prod",
+  "resources": [
+    {
+      "id": "vpc-main",
+      "type": "network",
+      "version": "1.4.2",
+      "pinned": true,
+      "tags": { "owner": "platform", "env": "prod" },
+      "config_hash": "8d9a7f2b"
+    },
+    {
+      "id": "db-orders",
+      "type": "database",
+      "version": "13.11.0",
+      "pinned": false,
+      "tags": { "owner": "platform", "env": "prod", "cost_center": "cc-42" },
+      "config_hash": "ffffeeee"
+    },
+    {
+      "id": "svc-api",
+      "type": "compute",
+      "version": "2026.03.01",
+      "pinned": true,
+      "tags": { "owner": "platform", "env": "prod", "cost_center": "cc-42" },
+      "config_hash": "aa11bb22"
+    }
+  ]
+}
+
