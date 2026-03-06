@@ -25,6 +25,7 @@ More detail: `docs/architecture.md`.
 ```bash
 make setup
 make demo
+make test-demo
 ```
 
 ## Demo
@@ -46,3 +47,22 @@ PYTHONPATH=src python3 -m portfolio_proof validate --examples examples/failing
 - No secrets are required for the demo and nothing reads environment credentials.
 - Generated outputs go to `artifacts/` (gitignored).
 - The GitHub token workflow is intentionally out-of-scope for the demo CLI (see `docs/security.md`).
+
+## Sponsorship and contact
+
+Sponsored by:
+CloudForgeLabs  
+https://cloudforgelabs.ainextstudios.com/  
+support@ainextstudios.com
+
+Built by:
+Freddy D. Alvarez  
+https://www.linkedin.com/in/freddy-daniel-alvarez/
+
+For job opportunities, contact:
+it.freddy.alvarez@gmail.com
+
+## License
+
+Personal, educational, and non-commercial use is free. Commercial use requires paid permission.
+See `LICENSE` and `COMMERCIAL_LICENSE.md`.

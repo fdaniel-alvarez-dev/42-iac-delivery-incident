@@ -1,4 +1,4 @@
-.PHONY: setup demo test lint clean
+.PHONY: setup demo test lint test-demo test-production clean
 
 PY := python3
 
@@ -15,15 +15,13 @@ demo: setup
 lint: setup
 	$(PY) -m compileall -q src tests
 
-test: setup
-	$(PY) -m unittest discover -s tests -p "test_*.py" -q
-	$(PY) -m portfolio_proof validate --examples examples/passing
-	@if $(PY) -m portfolio_proof validate --examples examples/failing >/dev/null; then \
-		echo "ERROR: expected validate to fail on examples/failing"; \
-		exit 1; \
-	else \
-		echo "OK: validate fails on examples/failing (as expected)"; \
-	fi
+test: test-demo
+
+test-demo: setup
+	TEST_MODE=demo $(PY) tests/run_tests.py
+
+test-production: setup
+	TEST_MODE=production PRODUCTION_TESTS_CONFIRM=1 $(PY) tests/run_tests.py
 
 clean:
 	rm -rf artifacts
